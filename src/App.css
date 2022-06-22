@@ -1,38 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
 .App {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 { 
+  font-family: 'Shadows Into Light', sans-serif;
+  color: #094067;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 span {
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+label {
+  display: block;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.inputContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+input {
+  width: 50%;
+  font-family: 'Nanum Pen Script', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  border: 2px solid #5f6c7b;
+  margin: 50px 0;
+}
+
+button {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-family: 'Amatic SC', sans-serif;
   color: white;
+  background-color: #3da9fc;
+  padding: 5px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+
 }
 
-.App-link {
-  color: #61dafb;
+button:hover,
+button:focus {
+  background-color: #ef4565;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-family: 'Nanum Pen Script', sans-serif;
+  flex-basis: 70%;
+  margin: 0;
+  font-size: 3rem;
+  color: #5f6c7b;
+  display: inline-block;
+  position: relative;
+}
+
+.displaySection {
+  border: 2px dotted #d8eefe;
+  margin: 100px 0;
+}
+
+.journalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  border: 2px dotted #d8eefe;
+  padding: 10px;
+}
+
+
+.journalContainer button {
+  font-size: 1.7rem;
+  background-color: #90b4ce;
+  flex-basis: 15%;
+  position: relative;
+  z-index: 1;
+}
+
+.journalContainer button::before {
+  content: '';
+  background-color:  #3da9fc;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+
+  transition: transform 3000ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 5px;
+
+}
+
+.journalContainer button:hover::before,
+.journalContainer button:focus::before {
+  transform: scaleX(1);
+  
 }
