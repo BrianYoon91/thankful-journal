@@ -2,7 +2,8 @@ import './App.css';
 import firebase from './firebase';
 import { useState, useEffect } from 'react';
 import Header from './Header';
-import {getDatabase, ref, onValue, push, remove} from 'firebase/database'
+import {getDatabase, ref, onValue, push, remove} from 'firebase/database';
+import Footer from './Footer';
 
 function App() {
 
@@ -65,7 +66,7 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
+    <Header />
       <form action="submit" onSubmit={handleSubmit}>
 
         <label htmlFor="newEntry">Add something you are thankful for🙏</label>
@@ -92,6 +93,7 @@ function App() {
 
         }
 
+    <Footer />
 
     </div>
   );
